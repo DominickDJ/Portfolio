@@ -1,0 +1,49 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome span {
+  display: inline-block;
+  animation: jump 1.5s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--index));
+  font-size: 4em;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome span.uppercase {
+  animation: jump-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%,
+  70% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-20px) scale(0.9);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes jump-pulse {
+  0%,
+  70% {
+    transform: translateY(0) scale(1);
+  }
+  20%,
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+  40%,
+  60% {
+    transform: translateY(-20px) scale(0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
