@@ -1,0 +1,28 @@
+.skill {
+  width: 100px;
+  height: 100px;
+}
+.skill:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.skill__section {
+  margin-top: 100px;
+}
+.skill__title {
+  display: flex;
+  justify-content: center;
+}
+.skill__click {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
