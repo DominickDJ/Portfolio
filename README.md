@@ -7,7 +7,7 @@
 **Recent updates**
 
 - **Description**
-  A Frontend web application called “Portfolio”. This application reads news data from a news API through a proxy then renders called information to the page.
+  A Frontend web application called “Portfolio”.
 
   **Links**
 
