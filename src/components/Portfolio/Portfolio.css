@@ -1,3 +1,6 @@
+#portfolio {
+  margin-top: 50px;
+}
 .welcome {
   display: flex;
   justify-content: center;
@@ -8,7 +11,7 @@
   animation: jump 1.5s ease-in-out infinite;
   animation-delay: calc(0.1s * var(--index));
   font-size: 4em;
-  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  background: linear-gradient(75deg, #d1352a, #1a0404);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

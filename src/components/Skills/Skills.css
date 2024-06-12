@@ -1,11 +1,11 @@
 .skill {
   width: 100px;
   height: 100px;
+  transition: transform 0.5s ease;
+  position: relative;
+  opacity: 0.6;
 }
-.skill:hover {
-  opacity: 0.4;
-  cursor: pointer;
-}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -14,15 +14,21 @@
   gap: 100px;
   margin-bottom: 100px;
 }
+
 .skill__section {
   margin-top: 100px;
 }
+
 .skill__title {
   display: flex;
   justify-content: center;
+  padding-bottom: 40px;
+  font-size: 2em; /* Adjust the font size as desired */
+  color: #f5a30a; /* Adjust the color to your preferred color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for a cool effect */
 }
-.skill__click {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
+
+.skill:hover {
+  transform: rotate(360deg);
+  opacity: 1;
 }

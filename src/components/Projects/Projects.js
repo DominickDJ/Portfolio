@@ -1,24 +1,24 @@
 import React from "react";
+import "../Projects/Projects.css";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Full Stack App",
-      githubLink: "https://github.com/DominickDJ/se_project_react",
+      title: "Around the US",
+      githubLink: "https://dominickdj.github.io/se_project_aroundtheus/",
     },
     {
       id: 2,
-      title: "Final Project",
+      title: "News Seach App",
       githubLink: "https://dominickdj.github.io/Dominick_Frontend/",
     },
-    // Add more projects here
+    { id: 3, title: "Portfolio code" },
   ];
 
   return (
-    <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Summary of your skills, desires, and future plans</p>
+    <section id="projects" className="center">
+      <h1 className="project__title"> PROJECTS</h1>
       <div className="project-thumbnails">
         {projects.map((project) => (
           <a
@@ -26,10 +26,10 @@ const Projects = () => {
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
+            className="project-link"
           >
-            <div className="project-thumbnail">
-              <h3>{project.title}</h3>
-            </div>
+            <div className="project-thumbnail"></div>
+            <h3>{project.title}</h3>
           </a>
         ))}
       </div>

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <HashRouter basename="/">
       <div className="page">
-        <ul class="background">
+        <ul className="background">
           <li></li>
           <li></li>
           <li></li>

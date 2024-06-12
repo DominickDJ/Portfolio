@@ -6,15 +6,13 @@ const Resume = () => {
   // ...
 
   return (
-    <section id="resume">
-      {/* ... */}
+    <section id="resume" className="resume__container">
       <div className="resume__section">
-        <h2 className="resume__title">Resume</h2>
-        <div>
-          <img className="resume" src={resumeFile} alt="Resume" />
+        <h1 className="resume__title">RESUME</h1>
+        <div className="resume__image-container">
+          <img className="resume__image" src={resumeFile} alt="Resume" />
         </div>
       </div>
-      {/* ... */}
     </section>
   );
 };
