@@ -1,4 +1,4 @@
-# NewsExplorer React
+# PORTFOLIO
 
 **Project name**
 
