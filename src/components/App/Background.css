@@ -19,7 +19,7 @@
   left: 0;
   margin: 0;
   padding: 0;
-  background: #4e54c8;
+  background: #ffffff;
   overflow: hidden;
   z-index: -50;
 }
@@ -30,7 +30,7 @@
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(64, 82, 240, 0.329);
   animation: animate 38s linear infinite;
 }
 

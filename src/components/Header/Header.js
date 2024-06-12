@@ -25,9 +25,9 @@ const Header = () => {
             className="header__home-button"
             type="text"
           >
-            Home
+            About
           </button>
-        </Link>{" "}
+        </Link>
         <Link to="/portfolio">
           <button
             onClick={handlePortfolioClick}

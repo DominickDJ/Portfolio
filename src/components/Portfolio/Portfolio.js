@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Projects from "../Projects/Projects";
 import Resume from "../Resume/Resume";
 import Skills from "../Skills/Skills";
@@ -7,25 +7,58 @@ import Achievements from "../Achievements/Achievements";
 
 const Portfolio = () => {
   const title = "Welcome To My Portfolio";
+  const [typedTitle, setTypedTitle] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const typingSpeed = 100;
+  const deletionSpeed = 30;
+  const repetitionPause = 1000;
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+
+  useEffect(() => {
+    const typeCharacter = () => {
+      if (!isDeleting) {
+        if (currentIndex <= title.length) {
+          setTypedTitle(title.slice(0, currentIndex + 1));
+          setCurrentIndex((prevIndex) => prevIndex + 1);
+        } else {
+          setIsDeleting(true);
+          setTimeout(() => setIsDeleting(false), repetitionPause);
+        }
+      } else {
+        if (currentIndex >= 0) {
+          setTypedTitle(title.slice(0, currentIndex));
+          setCurrentIndex((prevIndex) => prevIndex - 1);
+        } else {
+          setIsAnimationComplete(true);
+        }
+      }
+    };
+
+    const timer = setTimeout(
+      typeCharacter,
+      isDeleting ? deletionSpeed : typingSpeed
+    );
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [currentIndex, isDeleting, title]);
+
+  if (isAnimationComplete) {
+    return (
+      <section id="portfolio">
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Resume />
+      </section>
+    );
+  }
 
   return (
     <section id="portfolio">
-      <h1 className="welcome">
-        {title.split(" ").map((word, index) => (
-          <React.Fragment key={index}>
-            {word.split("").map((letter, letterIndex) => (
-              <span
-                key={letterIndex}
-                style={{ "--index": letterIndex }}
-                className={letter === letter.toUpperCase() ? "uppercase" : ""}
-              >
-                {letter}
-              </span>
-            ))}
-            {index !== title.split(" ").length - 1 && <span>&nbsp;</span>}
-          </React.Fragment>
-        ))}
-      </h1>
+      <h1 className="welcome">{typedTitle}</h1>
       <Skills />
       <Projects />
       <Achievements />
