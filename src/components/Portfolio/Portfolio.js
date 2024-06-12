@@ -3,6 +3,7 @@ import Projects from "../Projects/Projects";
 import Resume from "../Resume/Resume";
 import Skills from "../Skills/Skills";
 import "../Portfolio/Portfolio.css";
+import Achievements from "../Achievements/Achievements";
 
 const Portfolio = () => {
   const title = "Welcome To My Portfolio";
@@ -27,6 +28,7 @@ const Portfolio = () => {
       </h1>
       <Skills />
       <Projects />
+      <Achievements />
       <Resume />
     </section>
   );

@@ -1,0 +1,39 @@
+#achievements {
+  padding: 20px;
+  margin-top: 70px;
+}
+
+.achievements__title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  font-size: 2em;
+  color: #f5a30a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.certification {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.certification h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.certification p {
+  margin-bottom: 5px;
+}
+
+.images {
+  max-width: 100%;
+  height: auto;
+}
