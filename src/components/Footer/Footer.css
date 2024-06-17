@@ -22,7 +22,6 @@
 
 .footer__copyright {
   opacity: 0.5;
-  padding-left: 30px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {

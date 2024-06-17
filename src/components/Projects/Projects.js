@@ -13,7 +13,11 @@ const Projects = () => {
       title: "News Seach App",
       githubLink: "https://dominickdj.github.io/Dominick_Frontend/",
     },
-    { id: 3, title: "Portfolio code" },
+    {
+      id: 3,
+      title: "Portfolio Code",
+      githubLink: "https://github.com/DominickDJ/Portfolio",
+    },
   ];
 
   return (

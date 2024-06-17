@@ -11,25 +11,31 @@ const Main = () => {
       setIsSpinning(false);
     }, 1000);
   };
+
   const imageClassName = isSpinning ? "about__image spinning" : "about__image";
 
   return (
     <section id="main">
       <div className="intro">
-        <div className="intro-content">
+        <div className="text-container">
           <h1 className="intro-heading">Welcome!</h1>
           <p className="intro-text">
-            Hello! I'm Dominick Harper, a Full Stack Software Engineer. I
-            specialize in MERN (MongoDB, Express.js, React.js, Node.js). Feel
-            free to explore my work and get in touch with me!
+            Hello! I'm Dominick Harper, a Full Stack Software Engineer, devout
+            believer in Jesus Christ and father to 3 beautiful children. I
+            specialize in MERN development (MongoDB, Express.js, React.js,
+            Node.js) and I'm always open to learn new languages and skills! Feel
+            free to explore my Portfolio and don't hesitate to get in touch with
+            me!
           </p>
         </div>
-        <img
-          className={imageClassName}
-          src={aboutImage}
-          alt="Author"
-          onClick={handleImageClick}
-        />
+        <div className="image-container">
+          <img
+            className={imageClassName}
+            src={aboutImage}
+            alt="Author"
+            onClick={handleImageClick}
+          />
+        </div>
       </div>
     </section>
   );

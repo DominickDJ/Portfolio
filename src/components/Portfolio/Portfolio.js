@@ -6,13 +6,13 @@ import "../Portfolio/Portfolio.css";
 import Achievements from "../Achievements/Achievements";
 
 const Portfolio = () => {
-  const title = "Welcome To My Portfolio";
+  const title = "Welcome To My Portfolio!";
   const [typedTitle, setTypedTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 100;
+  const typingSpeed = 125;
   const deletionSpeed = 30;
-  const repetitionPause = 1000;
+  const repetitionPause = 5000;
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
 
   useEffect(() => {
@@ -43,7 +43,26 @@ const Portfolio = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [currentIndex, isDeleting, title]);
+  }, [
+    currentIndex,
+    isDeleting,
+    title,
+    typingSpeed,
+    deletionSpeed,
+    repetitionPause,
+  ]);
+
+  useEffect(() => {
+    if (isAnimationComplete) {
+      const hideContent = setTimeout(() => {
+        setTypedTitle("");
+      }, 5000); // Add a 2-second delay before hiding the content
+
+      return () => {
+        clearTimeout(hideContent);
+      };
+    }
+  }, [isAnimationComplete]);
 
   if (isAnimationComplete) {
     return (

@@ -19,3 +19,9 @@
   color: #000;
   /* Change the color to your desired color for visited links */
 }
+.project-thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}

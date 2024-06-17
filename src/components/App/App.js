@@ -13,32 +13,15 @@ const App = () => {
     <HashRouter basename="/">
       <div className="page">
         <ul className="background">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          {[...Array(20)].map((_, index) => (
+            <li key={index}></li>
+          ))}
         </ul>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="/portfolio" element={<Portfolio />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
+          <Route path="/" element={<Main />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

@@ -4,5 +4,17 @@
 
 .welcome {
   display: flex;
+  font-size: 5rem;
   justify-content: center;
+}
+@media screen and (min-width: 850px) and (max-width: 1280px) {
+  .welcome {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 850px) {
+  .welcome {
+    font-size: 2rem;
+  }
 }
