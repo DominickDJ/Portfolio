@@ -24,6 +24,12 @@ const Projects = () => {
       githubLink: "https://github.com/DominickDJ/Portfolio",
       thumbnail: portfolio,
     },
+    {
+      id: 4,
+      title: "Full-Stack App (code)",
+      githubLink: "https://github.com/DominickDJ/se_project_react/",
+      thumbnail: "In Construction",
+    },
   ];
 
   return (
