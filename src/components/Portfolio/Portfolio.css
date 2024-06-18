@@ -1,11 +1,17 @@
 #portfolio {
   margin-top: 50px;
 }
-
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .welcome {
   display: flex;
   font-size: 5rem;
   justify-content: center;
+  text-align: center;
+  margin: 0;
 }
 @media screen and (min-width: 850px) and (max-width: 1280px) {
   .welcome {

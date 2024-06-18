@@ -12,7 +12,7 @@ const Portfolio = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const typingSpeed = 125;
   const deletionSpeed = 30;
-  const repetitionPause = 5000;
+  const repetitionPause = 1000;
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Portfolio = () => {
     if (isAnimationComplete) {
       const hideContent = setTimeout(() => {
         setTypedTitle("");
-      }, 5000); // Add a 2-second delay before hiding the content
+      }, 100); // Add a 2-second delay before hiding the content
 
       return () => {
         clearTimeout(hideContent);
@@ -77,7 +77,9 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h1 className="welcome">{typedTitle}</h1>
+      <div className="centered">
+        <h1 className="welcome">{typedTitle}</h1>
+      </div>
       <Skills />
       <Projects />
       <Achievements />
